@@ -14,6 +14,18 @@ class Album extends Component {
         };
     }
 
+//    prettytime (duration) {
+//        return 1;
+//    }
+
+    prettyTime (timeInSeconds) {
+        let minutes = Math.floor( timeInSeconds / 60);
+        let secs = Math.floor( timeInSeconds % 60);
+        if (secs < 10) {return (minutes + ":0" + secs)};
+        return (minutes + ":" + secs);
+    }
+
+
     render () {
         return (
             <section className="album">
@@ -32,6 +44,21 @@ class Album extends Component {
                         <col id="song-duration-column" />
                     </colgroup>
                     <tbody>
+                    {
+                        this.state.album.songs.map( (song, index) =>
+                            <tr key={index}>
+                                    <td>
+                                        <button>
+                                            <span className="song-number">{index + 1}</span>
+                                            <span className="ion-play"></span>
+                                            <span className="ion-pause"></span>
+                                        </button>
+                                    </td>
+                                    <td>{song.title}</td>
+                                    <td>{this.prettyTime(song.duration)}</td>
+                            </tr>
+                        )
+                    }
                     </tbody>
                 </table>
             </section>

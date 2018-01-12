@@ -27,7 +27,7 @@ class Album extends Component {
 
     pause() {
         this.audioElement.pause();
-        this.setState({isPlaying:true});
+        this.setState({isPlaying:false});
     }
 
     setSong(song) {

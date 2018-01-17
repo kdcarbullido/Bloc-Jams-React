@@ -95,11 +95,12 @@ class Album extends Component {
     }
 
     formatTime(timeInSeconds) {
+        if (!timeInSeconds) {return "-:--"};
         let time = timeInSeconds;
-        console.log('formatTime: ', time, "timeinSeconds", timeInSeconds);
+ //       console.log('formatTime: ', time, "timeinSeconds", timeInSeconds);
         let minutes = Math.floor( timeInSeconds / 60);
         let secs = Math.floor( timeInSeconds % 60);
-        console.log(minutes + ":" + secs);
+//        console.log(minutes + ":" + secs);
         if (secs < 10) {return (minutes + ":0" + secs)}
         return (minutes + ":" + secs);
     }

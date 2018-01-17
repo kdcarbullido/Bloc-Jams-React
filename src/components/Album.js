@@ -95,6 +95,8 @@ class Album extends Component {
     }
 
     formatTime(timeInSeconds) {
+        let time = timeInSeconds;
+        console.log('formatTime: ', time, "timeinSeconds", timeInSeconds);
         let minutes = Math.floor( timeInSeconds / 60);
         let secs = Math.floor( timeInSeconds % 60);
         console.log(minutes + ":" + secs);
@@ -148,7 +150,9 @@ class Album extends Component {
                     handleNextClick={() => this.handleNextClick()}
                     handleTimeChange={(e) => this.handleTimeChange(e)}
                     handleVolumeChange={(e) => this.handleVolumeChange(e)}
-                    formatTime={() => this.formatTime()}
+                    formatCurrentTime={() => this.formatTime(this.audioElement.currentTime)}
+                    formatDurationTime={() => this.formatTime(this.audioElement.duration)}
+
                 />
             </section>
         );

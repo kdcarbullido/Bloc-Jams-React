@@ -1,5 +1,122 @@
+html {
+  font-size: 16px;
+  background-color: steelblue;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+nav {
+  background-color: black;
+  font-size: 1.5em;
+  padding: 1rem 2rem;
+  Margin: 1em 6em;
+}
+
+nav a {
+  color: white;
+  margin: 1em;
+}
+
+.landing .hero-title {
+  font-size: 4em;
+  color: white;
+}
+
+.point {
+  border: 1px white solid;
+  color: aliceblue;
+  margin: 1rem;
+}
+
+.point-title {
+  font-size: 2em;
+  }
+
+.point-description {
+  font-size: 1.5em;
+}
+
+.library a {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  color: snow;
+  font-size: 2em;
+  text-decoration: none;
+  border: 1px black solid;
+  opacity: 1;
+}
+
+.library a:hover {
+  background-color: black;
+  border: 2px black solid;
+}
+
+.library div {
+  margin: 2em;
+}
+
+.album {
+  font-size: 1.2rem;
+}
+
+#album-info h1, h2, div {
+  margin: 1rem;
+}
+
+#song-list {
+  width: 100%;
+  margin: auto;
+
+}
+
+.song-title {
+  border-bottom: lightblue .5px solid;
+  margin-bottom: 8px;
+}
+
+tr :hover {
+  color: red;
+}
+
+
+#buttons {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+#buttons button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.5);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#buttons button:hover, #buttons button:focus {
+  outline: none;
+  color: hsla(0, 0%, 100%, 1);
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+
+.player-bar {
+  margin-top: 3rem;
+}
+
+#time-control div, input {
+  display: inline;
+  margin: 2rem;
+}
+
+#volume-control div, input {
+  display: inline;
+  margin: 2rem;
+}
+

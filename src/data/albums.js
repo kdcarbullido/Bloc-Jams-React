@@ -1,7 +1,7 @@
 export default [{
     title: 'Miscellaneous Selections',
     artist: 'Coldplay',
-    releaseInfo: 'Not Applicable',
+    releaseInfo: '(various release dates)',
     albumCover: '/assets/images/album_covers/01.jpg',
     slug: 'the-colors',
     songs: [
@@ -12,9 +12,9 @@ export default [{
         { title: 'The Scientist', duration: '309.00', audioSrc: '/assets/music/04 The Scientist.mp3' }
     ]
 }, {
-    title: 'Miscellaneous Selectinos',
+    title: 'Miscellaneous Selections',
     artist: 'Green Day',
-    releaseInfo: 'Not applicable',
+    releaseInfo: '(various release dates)',
     albumCover: '/assets/images/album_covers/02.jpg',
     slug: 'the-telephone',
     songs: [

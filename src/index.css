@@ -134,3 +134,10 @@ tr:hover .ion-play,
   display: block;
 }
 
+tr.paused .ion-play {
+  display: block;
+}
+
+tr.paused .song-number {
+  display: none;
+}

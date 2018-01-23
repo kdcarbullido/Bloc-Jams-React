@@ -108,15 +108,11 @@ class Album extends Component {
         if (song === this.state.currentSong) {
             if (this.state.isPlaying) {
                 return 'song playing';
-            } else
-            return 'song';
-        }
+            } else {
+                return 'song paused';
+            }
+        } else return 'song';
     }
-
-
-
-
-
 
     render () {
         return (

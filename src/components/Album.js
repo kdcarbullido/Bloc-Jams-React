@@ -60,6 +60,7 @@ class Album extends Component {
         const isSameSong = this.state.currentSong === song;
         if (this.state.isPlaying && isSameSong) {
             this.pause();
+
         } else {
             if (!isSameSong) { this.setSong(song); }
             this.play();
@@ -97,13 +98,25 @@ class Album extends Component {
     formatTime(timeInSeconds) {
         if (!timeInSeconds) {return "-:--"};
         let time = timeInSeconds;
- //       console.log('formatTime: ', time, "timeinSeconds", timeInSeconds);
         let minutes = Math.floor( timeInSeconds / 60);
         let secs = Math.floor( timeInSeconds % 60);
-//        console.log(minutes + ":" + secs);
         if (secs < 10) {return (minutes + ":0" + secs)}
         return (minutes + ":" + secs);
     }
+
+    songClass (song) {
+        if (song === this.state.currentSong) {
+            if (this.state.isPlaying) {
+                return 'song playing';
+            } else
+            return 'song';
+        }
+    }
+
+
+
+
+
 
     render () {
         return (
@@ -125,7 +138,7 @@ class Album extends Component {
                     <tbody>
                     {
                         this.state.album.songs.map( (song, index) =>
-                            <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
+                            <tr className={this.songClass(song)} key={index} onClick={() => this.handleSongClick(song)}>
                                     <td className={"song-actions"}>
                                         <button>
                                             <span className="song-number">{index + 1}</span>

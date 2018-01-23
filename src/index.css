@@ -45,10 +45,11 @@ nav a {
   flex-direction: row;
   margin: 2em;
   color: snow;
-  font-size: 2em;
+  font-size: 1.5em;
   text-decoration: none;
   border: 1px black solid;
   opacity: 1;
+  min-width: 960px;
 }
 
 .library a:hover {
@@ -65,7 +66,8 @@ nav a {
 }
 
 #album-info h1, h2, div {
-  margin: 1rem;
+  line-height: 1.5rem;
+  margin: 1.0rem;
 }
 
 #song-list {
@@ -79,10 +81,9 @@ nav a {
   margin-bottom: 8px;
 }
 
-tr :hover {
+tr:hover {
   color: red;
 }
-
 
 #buttons {
   width: 300px;
@@ -120,19 +121,16 @@ tr :hover {
   margin: 2rem;
 }
 
-
-tr:hover .ion-play,
-tr.playing .ion-pause,
-tr.paused .ion-play {
-  display: block;
-}
-
 tr .ion-play,
 tr .ion-pause,
 tr:hover .song-number,
-tr.playing .ion-play,
-tr.playing .song-number,
-tr.paused .ion-pause,
-tr.paused .song-number {
+tr.playing:hover .ion-play,
+.playing .song-number {
   display: none;
 }
+
+tr:hover .ion-play,
+.playing .ion-pause {
+  display: block;
+}
+
